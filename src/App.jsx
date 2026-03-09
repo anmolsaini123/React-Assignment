@@ -68,11 +68,16 @@ function App() {
           )}
 
           <button onClick={() => {
-            setPage("shop");
-            
-          }}>
-            Back to Shop
-          </button>
+  setPage("shop");
+
+  if (paymentDone) {
+    setCart([]);  
+  }
+
+  setPaymentDone(false);
+}}>
+  Back to Shop
+</button>
         </div>
       )}
 
